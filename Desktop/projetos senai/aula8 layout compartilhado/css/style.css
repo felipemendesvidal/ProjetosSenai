@@ -1,0 +1,13 @@
+/* Reset */
+*{margin: 0px; height: 0px; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
+a{text-decoration: none;}
+ul{list-style-type: none;}
+.container{width: 70%;height: 100%;margin: 0; position: relative;}
+.display{display: flex; align-items: center;}
+/* fim reset */
+a{
+    padding: 10px 30px;
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+}

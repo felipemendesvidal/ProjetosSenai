@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- configurações dos caracteres -->
+        <meta charset="UTF-8">
+        <!-- responsividade controle -->
+        <meta name="viewport" content="width=device-width, initial-scale=0"/>
+        <title>flexbox dicionario- Felipe</title>
+        <!-- link css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <!-- inicio header -->
+      <header>
+        <nav class="menu">
+          <ul>
+            <li><a href="#1">Inicio</a></li>
+            <li><a href="#2">display flex</a></li>
+            <li><a href="#3">flex direction</a></li>
+            <li><a href="#4">justify-content</a></li>
+            <li><a href="#5">align-items</a></li>
+            <li><a href="#6">Align-content</a></li>
+
+
+
+          </ul>
+        </nav>
+        <h1 class="espac">Meu guia de Flexbox</h1>
+      </header>
+      <!-- fim header -->
+      <!-- inicio main -->
+      <!-- depois do main o ideal é apenas colocar o footer -->
+      <main id="1">
+        <section class="alinha">
+          <h2>Flexbox</h2>
+          <p>Esse guia foi baseado no curso de css Flexbox da escola Origamid pelo professor Andre Rafael, para revisar os conceitos dados pela escola Senai de Informatica</p>
+          <h3>Fundamentos do flexbox</h3>
+          <p>O css flexbox é um modelo de criação de layouts responsivos</p>
+          <p>Existe dois grupos dentro dessa criação, o <span>Flex container</span> e o <span>Flex Item</span>, que são os itens que estão dentro d container e como eles vão se comportar</p>
+        </section>
+        <section  id="2" class="alinha2">
+        <h2 >Display flex</h2>
+        <h3>flex container</h3>
+        <p> Display é uma propriedade antiga do css, com os atributos, inline, inline-block e agora <span>Display:flex</span>, apos isso, todos os elemntos dentro desse bloco se tornam flex item</p>
+        <h3>Exemplos de Display:</h3><h4>Display: block</h4>
+        <div class="box1 container">
+          <div class="caixa">1</div>
+          <div class="caixa">2</div>
+          <div class="caixa">3</div>
+          <div class="caixa">4</div>
+          <div class="caixa">5</div>
+        </div>
+        <p>Por padrão, fica um embaixo do outro</p>
+        </section>
+        
+        <section class="alinha2">
+           <h4>Display: flex</h4>
+        <div  class="box2 container flex">
+          <div class="caixa">1</div>
+          <div class="caixa">2</div>
+          <div class="caixa">3</div>
+          <div class="caixa">4</div>
+          <div class="caixa">5</div>
+          <!-- div*5.classe -->
+        </div>
+         <p>Por padrão, fica um ao lado do outro, com o tamanho procorcional ao conteudo dentro do item se caso não for definido um tamanho e largura para esse item, essa propriedade pode atravessar o container, caso os elementos em cada item não tenham um tamanho definido.</p>
+        </section>
+       <section class="alinha2">
+         <h4>Flex-wrap</h4>
+        <div  class="box3 container flex">
+          <div class="caixa">1</div>
+          <div class="caixa">2</div>
+          <div class="caixa">3</div>
+          <div class="caixa">4</div>
+          <div class="caixa">5</div>
+          <div class="caixa">6</div>
+          <div class="caixa">7</div>
+          <div class="caixa">8</div>
+          <!-- div*5.classe -->
+          <div class="caixa">9</div>
+          <div class="caixa">10</div>
+          <div class="caixa">11</div>
+          <div class="caixa">12</div>
+          <div class="caixa">13</div>
+          <div class="caixa">14</div>
+          <div class="caixa">15</div>
+          <div class="caixa">16</div>
+          <div class="caixa">17</div>
+          <div class="caixa">18</div>
+          <div class="caixa">19</div>
+          <div class="caixa">20</div>
+        </div>
+        <p>O flex-wrap, define se os elementos irão quebrar ou não, e como irão quebrar, no caso dessa propriedade, define para quebrar em outra linha igual. Por padrão ele é nowrap, sem quebra, isso faz o conteudo estourar o container. temos as propriedas nowrap, wrap e wrap-reverse</p>
+       </section>
+       <section class="alinha2">
+        <h3>flex-flow</h3>
+        <p>é um atalho para o flex direction e flex-wrap, flex-flow:row, nowrap,colum </p>
+         
+       </section>
+
+       <section class="alinha2">
+          <h4>Display: flex // flex-items</h4>
+        <div  class="box3 container flex">
+          <div class="caixa flex-item">1</div>
+          <div class="caixa flex-item">2</div>
+          <div class="caixa flex-item">3</div>
+          <!-- div*5.classe -->
+        </div>
+         <p>O flex item é usado no item, dentro de um container flex, importante sempre lembrar disso.
+         Essa é a propriedade flex: 1; faz o item crescer ate ocupar o container todo, independente da quantidade, sempre de forma proporcional. </p>
+       </section>
+         
+       
+       <section id="3" class="alinha2">
+      
+        <h2>flex-direction</h2>
+        <p>Define a direção dos flex-itens, por padrão ele vem como row(linha, por isso quando o display: flex é atribuido, os elementos ficam em linha um do lado do outro.
+        Usamos a propriedade "column" quando estamos preparando os medias queries para o mobile</p>
+        <h4>Flex-direction:column</h4>
+        <!-- colocando 2 classes em um elemento -->
+        <div class="box4 container flex-direction1">
+          <div class="caixa2">1</div>
+          <div class="caixa2">2</div>
+          <div class="caixa2">3</div>
+          <div class="caixa2">4</div>
+          <div class="caixa2">5</div>
+          <!-- div*5.classe -->
+        </div>
+        <h4>Flex-direction:row</h4>
+        <div class="box4 container flex-direction2">
+          <div class="caixa2">1</div>
+          <div class="caixa2">2</div>
+          <div class="caixa2">3</div>
+          <div class="caixa2">4</div>
+          <div class="caixa2">5</div>
+          <!-- div*5.classe -->
+        </div>
+        <h4>Flex-direction:row-reverse</h4>
+        <div class="box4 container flex-direction3">
+          <div class="caixa2">1</div>
+          <div class="caixa2">2</div>
+          <div class="caixa2">3</div>
+          <div class="caixa2">4</div>
+          <div class="caixa2">5</div>
+          <!-- div*5.classe -->
+        </div>
+         <h4>Flex-direction:column-reverse</h4>
+        <div class="box4 container flex-direction4">
+          <div class="caixa2">1</div>
+          <div class="caixa2">2</div>
+          <div class="caixa2">3</div>
+          <div class="caixa2">4</div>
+          <div class="caixa2">5</div>
+          <!-- div*5.classe -->
+        </div>
+
+         </section>
+         <section id="4" class="alinha2">
+            <h2 >justify-content</h2>
+            <p>serve para alinha os itens flex dentro do container, essa propriedade so funciona se os itens não ocuarem todo o container.</p>
+         </section>
+         <section class="alinha2">
+          <h4>justify-content:flex-start</h4>
+            <div class="container flex flex-start">
+              <div class="caixa">1</div>
+              <div class="caixa">2</div>
+              <div class="caixa">3</div>
+              <div class="caixa">4</div>
+              <div class="caixa">5</div>
+            </div>
+            <p>alinha tudo a esquerda, bem no topo, é o padrão</p>
+           <h4>justify-content:flex-end</h4>
+            <div class="container flex flex-end">
+              <div class="caixa">1</div>
+              <div class="caixa">2</div>
+              <div class="caixa">3</div>
+              <div class="caixa">4</div>
+              <div class="caixa">5</div>
+            </div>
+            <p>alinha tudo a direita, bem no topo</p>
+             <h4>justify-content: center</h4>
+            <div class="container flex flex-center">
+              <div class="caixa">1</div>
+              <div class="caixa">2</div>
+              <div class="caixa">3</div>
+              <div class="caixa">4</div>
+              <div class="caixa">5</div>
+            </div>
+            <p>alinha tudo ao centro, bem no topo</p>
+              <h4>justify-content: space-between</h4>
+            <div class="container flex flex-spaceb">
+              <div class="caixa">1</div>
+              <div class="caixa">2</div>
+              <div class="caixa">3</div>
+              <div class="caixa">4</div>
+              <div class="caix a">5</div>
+            </div>
+            <p>alinha os itens em cada ponta, esquerda e direita, e todos os itens que estiverem ao meio, ganha um espaço proporcional</p>
+            <h4>justify-content: space-around</h4>
+            <div class="container flex flex-spacea">
+              <div class="caixa">1</div>
+              <div class="caixa">2</div>
+              <div class="caixa">3</div>
+              <div class="caixa">4</div>
+              <div class="caixa">5</div>
+            </div>
+            <p>alinha todos os itens, com espaçamentos proporcionais a duas vezes ao do tamanho do espacamento que der nos itens que fica nas pontas esquerdas e direita</p>
+
+         </section>
+         <section id="5" class="alinha2">
+          <h2>Align-items</h2>
+          <p>essa prpriedade serve para alinhas os itens que estão flex,dentro do container. alinhando no eixo x e y do container, ou seja, quando estão em colunas ou linhas  </p>
+         </section>
+         <section class="alinha2">
+           <h4>align-items:flex-strech </h4>
+            <div class="container flex align-item-stre">
+              <div class="caixa3">1</div>
+              <div class="caixa3">2</div>
+              <div class="caixa3">3</div>
+              <div class="caixa3">4</div>
+              <div class="caixa3">5</div>
+            </div>
+            <p>se o item não tiver um tamanho e largura, ele ira criar automaticamente seguindo como base o tamanho do container, criando itens de tamanho proporcionais ate prencher o container todo, propriedade padrão</p>
+
+             <h4>align-items:flex-start </h4>
+            <div class="container flex align-item-start">
+              <div class="caixa3">1</div>
+              <div class="caixa3">2</div>
+              <div class="caixa3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+              <div class="caixa3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4  4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+              <div class="caixa3">5</div>
+            </div>
+            <p>se o item não tiver um tamanho e largura, eles ficarão do tamanho do conteudo que estiver dentro, deixando na parte superior</p>
+           
+           <h4>align-items:flex-end </h4>
+            <div class="container flex align-item-end">
+              <div class="caixa3">1</div>
+              <div class="caixa3">2</div>
+              <div class="caixa3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+              <div class="caixa3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4  4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+              <div class="caixa3">5</div>
+            </div>
+            <p>se o item não tiver um tamanho e largura, eles ficarão do tamanho do conteudo que estiver dentro, deixando na parte inferior</p>
+              <h4>align-items:flex-centro</h4>
+            <div class="container flex align-item-center">
+              <div class="caixa3">1</div>
+              <div class="caixa3">2</div>
+              <div class="caixa3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+              <div class="caixa3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4  4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+              <div class="caixa3">5</div>
+            </div>
+            <p>se o item não tiver um tamanho e largura, eles ficarão do tamanho do conteudo que estiver dentro, deixando no centro</p>
+
+             <h4>align-items:baseline</h4>
+            <div class="container flex align-item-base">
+              <div class="caixa3">1</div>
+              <div class="caixa3">2</div>
+              <div class="caixa3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+              <div class="caixa3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4  4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+              <div class="caixa3">5</div>
+            </div>
+            <p>se o item não tiver um tamanho e largura, eles ficarão do tamanho do conteudo que estiver dentro, de acordo com a tipografia de base</p>
+
+             <h4>Para ficar alinhado bem ao centro</h4>
+            <div class="container flex align-item-center jcenter">
+              <div class="caixa4">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4  4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+            </div>
+            <p>Justify-content: center e align-item:center</p>
+         </section>
+         <section id="6" class="alinha2">
+          <h2>Align-content</h2>
+          <p>Essa propriedade alinha as linhas dentro do container verticalmente, essa propriedade so funciona se existir mais de uma linha flex-itens, precisa ter o fle-wrap. </p>
+
+          <h4>align-content:strech</h4>
+            <div class="container2 align-content1">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>por padrão, ele que faz os itens crescerem na vertical, no caso ele esta quebrando porque o container é menor na largura que todos os itens, logo ele quebra em linha e espande os itens ate que fique do tamanho do container inteiro, respeitando o que esta dentro de cada item</p>
+            <h4>align-content:flex-start</h4>
+            <div class="container2 align-content2">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>Diferente do stretch, o start não cria espaços entre os itens para ocupar todo o container, ele faz a mesma quebra mais alinha tudo na parte superior, seguindo o tamanho do item maior da linha</p>
+            <h4>align-content:flex-end</h4>
+            <div class="container2 align-content3">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>Diferente do stretch, o start não cria espaços entre os itens para ocupar todo o container, ele faz a mesma quebra mais alinha tudo na parte inferior, seguindo o tamanho do item maior da linha</p>
+             <h4>align-content:center</h4>
+            <div class="container2 align-content4">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>Diferente do stretch, o start não cria espaços entre os itens para ocupar todo o container, ele faz a mesma quebra mais alinha tudo n0 centro, seguindo o tamanho do item maior da linha</p>
+            <h4>align-content:space-between</h4>
+            <div class="container2 align-content5">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>essa propriedade faz os elementos ficarem com espaços iguais entre as linhas</p>
+
+             <h4>align-content:space-around</h4>
+            <div class="container2 align-content6">
+              <div class="caixa5">testandopalavra1</div>
+              <div class="caixa5">teste 2 do item</div>
+              <div class="caixa5">teste 3 do item agora mesmo</div>
+              <div class="caixa5">teste 4</div>
+              <div class="caixa5">teste 5</div>
+              <div class="caixa5">teste 6</div>
+              <div class="caixa5">teste 7</div>
+              <div class="caixa5">teste 8</div>
+               <div class="caixa5">teste 9</div>
+              <div class="caixa5">teste 10</div>
+              <div class="caixa5">teste 11</div>
+              <div class="caixa5">teste 12</div>
+              <div class="caixa5">teste 13</div>
+              <div class="caixa5">teste 14</div>
+              <div class="caixa5">teste 15</div>
+              <div class="caixa5">teste 16</div>
+              <div class="caixa5">teste 17</div>
+              <div class="caixa5">teste 18</div>
+              <div class="caixa5">teste 19</div>
+              <div class="caixa5">teste 20</div>
+              <div class="caixa5">teste 21</div>
+              <div class="caixa5">teste 22</div>
+              <div class="caixa5">teste 23</div>
+              <div class="caixa5">teste 24</div>
+              <div class="caixa5">teste 25</div>
+              <div class="caixa5">teste 26</div>
+              <div class="caixa5">teste 27</div>
+            </div>
+            <p>essa propriedade faz os elementos ficarem com espaços iguais entre as linhas, seguindo o dobro do inicio e do fim</p>
+
+
+         </section>
+         
+      
+      </main>
+     <!-- fim main -->
+      
+      
+    </body>
+</html> 

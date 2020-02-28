@@ -1,0 +1,41 @@
+/* reset */
+*{margin: 0px;padding: 0px;box-sizing: border-box;}
+.container{width: 1366px;height: 100%;  margin: auto; }
+ul{list-style-type: none;}
+a{text-decoration: none;font-size: 12px;; padding: 16px 30px;color: #ddd; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;}
+/* fim reset */
+/* iniciohead */
+.topo{width: 100%; background-color: #1c1c1c;}
+.menusuperior{width: 100%; height:41px;}
+.menusuperior ul{width: 100%; height: 100%; display:flex;align-items: center; justify-content: flex-end;}/*fles end jogando para esquerda*/
+/* almentando a area do click */
+.menusuperior a{ font-size: 12px;; padding: 16px 30px;color: #ddd; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;}
+/* text-shadow: ; sobre no texto */
+.menusuperior a:hover{ font-weight: lighter; text-shadow:0px 0px 10px #fff ;}
+/* uma parte do meu */
+.topomenu{width: 100%;height: 61px; background-color: black; position: sticky; top: 0px;z-index: 99;} 
+/* posicionamento styk */
+.menuprincipal{width: 100%;height: 60px; }
+/* alinhamento itens menu */
+.menuprincipal ul{width: 100%; height: 100%;display: flex;align-items: center; justify-content: space-around;}
+.menuprincipal ul li a{font-size:14px; font-weight: lighter; padding: 23px 50px;}
+.menuprincipal a:hover{background-color: #1c1c1c; color:darkgray;}
+/* alinhamento de texto sobre a imagem  */
+.bg{width: 100%; height: 500px; position: relative;background-image: url(../img/fundo.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;}
+.bg img{width: 100%;}
+.chamada{position: absolute; top:40%; left: 25%; text-align: center;}
+.chamada h1{margin-bottom: 30px; color: #ddd; text-transform: uppercase; letter-spacing: 2px;}
+.chamada a{padding: 15px 30px;box-sizing: 0px 3px 10px #333; background-color: rgba(0, 0, 0, 0.3); }
+
+
+.noticias h2{text-align: center;margin: 50px 25px; font-size: 30px;}
+.card{width: 250px; height: 350px; box-shadow: 0px 1px 20px #272727;}
+.card img{width: 100%; height: 150px;}
+.card h3{text-align: center;margin: 10px; font-size: 25px;}
+.card p{margin: 10px; line-height: 21px;color: #272727;}
+.flex{display: flex;}
+.space{justify-content: space-around;}
+.rodape{width: 100%; height: 50px; background-color: #1c1c1c; margin-top: 100px;}
+.rodape p{ text-align: center; padding: 15px; background-color: #1c1c1c; color: #fff;
+}
+main{width: 100%;}
